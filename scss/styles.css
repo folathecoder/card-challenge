@@ -112,8 +112,8 @@ p {
 .card {
   background-color: white;
   border-radius: 10px;
-  -webkit-box-shadow: 0.5px 1px 3px #b6b5b5;
-          box-shadow: 0.5px 1px 3px #b6b5b5;
+  -webkit-box-shadow: 0.5px 4px 3px #d4d4d4;
+          box-shadow: 0.5px 4px 3px #d4d4d4;
   border-top: 5px solid;
   padding: 20px;
   display: -webkit-box;
