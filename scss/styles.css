@@ -1,0 +1,190 @@
+body {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+h1 {
+  color: black;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  font-weight: 600;
+}
+
+h2 {
+  color: #4c4e61;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+p {
+  color: #4c4e61;
+  font-size: 0.94rem;
+  line-height: 1.5rem;
+  font-weight: 200;
+}
+
+.feature {
+  max-width: 1024px;
+  margin: 100px auto;
+}
+
+.feature__heading {
+  text-align: center;
+}
+
+.feature__heading span {
+  font-weight: 200;
+}
+
+.feature__paragraph {
+  text-align: center;
+  padding: 0px 60px;
+  margin: 0px 150px;
+}
+
+@media screen and (max-width: 1058px) {
+  .feature__paragraph {
+    margin: 0px 40px;
+  }
+}
+
+@media screen and (max-width: 671px) {
+  .feature__paragraph {
+    margin: 0px 0px;
+  }
+}
+
+.card-container {
+  background-color: white;
+  max-width: 100%;
+  padding-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 105px 105px 105px 105px;
+      grid-template-rows: 105px 105px 105px 105px;
+      grid-template-areas: "null card2 null1" "card1 card2 card4" "card1 card3 card4" "null3 card3 null4";
+}
+
+@media screen and (max-width: 1058px) {
+  .card-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 671px) {
+  .card-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1058px) {
+  .card-container {
+    -ms-grid-rows: 210px 210px;
+        grid-template-rows: 210px 210px;
+  }
+}
+
+@media screen and (max-width: 671px) {
+  .card-container {
+    -ms-grid-rows: 210px 210px 210px 210px;
+        grid-template-rows: 210px 210px 210px 210px;
+  }
+}
+
+@media screen and (max-width: 1058px) {
+  .card-container {
+        grid-template-areas: "card1 card2" "card3 card4";
+  }
+}
+
+@media screen and (max-width: 671px) {
+  .card-container {
+        grid-template-areas: "card1" "card2" "card3" "card4";
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0.5px 1px 3px #b6b5b5;
+          box-shadow: 0.5px 1px 3px #b6b5b5;
+  border-top: 5px solid;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+@media screen and (max-width: 1058px) {
+  .card {
+    margin: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 671px) {
+  .card {
+    margin: 0px 20px;
+  }
+}
+
+.card p {
+  margin-top: -5px;
+}
+
+.card img {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 50px;
+  margin-top: 10px;
+  height: auto;
+  display: block;
+  text-align: center;
+}
+
+.card__card1 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: card1;
+  border-color: #45d3d3;
+}
+
+.card__card2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: card2;
+  border-color: #ea5353;
+}
+
+.card__card3 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: card3;
+  border-color: #fcaf4a;
+}
+
+.card__card4 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: card4;
+  border-color: #549ef2;
+}
+
+footer {
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */

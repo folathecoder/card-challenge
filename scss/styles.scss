@@ -1,0 +1,188 @@
+//colors
+
+
+//background colors
+$color-bg-primary: white;
+$color-bg-accent1: hsl(0, 78%, 62%);
+$color-bg-accent2: hsl(180, 62%, 55%);
+$color-bg-accent3: hsl(34, 97%, 64%);
+$color-bg-accent4: hsl(212, 86%, 64%);
+
+//text colors
+$color-text-h1: black;
+$color-text-h2: hsl(234, 12%, 34%);
+$color-text-body: hsl(234, 12%, 34%);
+
+//typography
+$font-text-primary: 'Poppins', sans-serif;
+
+
+
+//responsiveness settings
+
+@mixin media-query ($size) {
+    @if $size == desktop {
+        @media screen and (max-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $size == tablet {
+        @media screen and (max-width: 1058px) {
+            @content;
+        }
+    }
+    @else if $size == mobile {
+        @media screen and (max-width: 671px) {
+            @content;
+        }
+    }
+}
+//base styling 
+body {
+    background-color: $color-bg-primary;
+    font-family: $font-text-primary;
+    height: 100vh;
+}
+h1 {
+    color: $color-text-h1;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    font-weight: 600;
+}
+h2 {
+    color: $color-text-h2;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+p {
+    color: $color-text-body;
+    font-size: 0.94rem;
+    line-height: 1.5rem;
+    font-weight: 200;
+}
+
+
+//content styling 
+.feature {
+    max-width: 1024px;
+    margin: 100px auto;
+}
+
+.feature__heading {
+    text-align: center;
+
+    span {
+        font-weight: 200;
+    }
+}
+
+.feature__paragraph {
+    text-align: center;
+    padding: 0px 60px;
+    margin: 0px 150px;
+
+    @include media-query(tablet) {
+        margin: 0px 40px;
+    }
+    @include media-query(mobile) {
+        margin: 0px 0px;
+    }
+}
+
+.card-container {
+    background-color: $color-bg-primary;
+    max-width: 100%;
+    padding-top: 50px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include media-query(tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include media-query(mobile) {
+        grid-template-columns: 1fr;
+    }
+
+
+
+    grid-template-rows: 105px 105px 105px 105px;
+
+    @include media-query(tablet) {
+        grid-template-rows: 210px 210px;
+    }
+    @include media-query(mobile) {
+        grid-template-rows: 210px 210px 210px 210px;
+    }
+    
+    grid-template-areas: 
+    "null card2 null1"
+    "card1 card2 card4"
+    "card1 card3 card4"
+    "null3 card3 null4";
+
+    @include media-query(tablet) {
+        grid-template-areas: 
+        "card1 card2"
+        "card3 card4";
+    }
+    @include media-query(mobile) {
+        grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4";
+    }
+
+}
+
+.card {
+    background-color: $color-bg-primary;
+    border-radius: 10px;
+    box-shadow: 0.5px 1px 3px rgb(182, 181, 181);
+    border-top: 5px solid;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+
+    @include media-query(tablet) {
+        margin: 0px 10px;
+    }
+    @include media-query(mobile) {
+        margin: 0px 20px;
+    }
+}
+
+.card p {
+    margin-top: -5px;
+}
+.card img {
+    align-self: flex-end;
+    width: 50px;
+    margin-top: 10px;
+    height: auto;
+    display: block;
+    text-align: center;
+}
+
+.card__card1 {
+    grid-area: card1;
+    border-color: $color-bg-accent2;
+}
+.card__card2 {
+    grid-area: card2;
+    border-color: $color-bg-accent1;
+}
+.card__card3 {
+    grid-area: card3;
+    border-color: $color-bg-accent3;
+}
+.card__card4 {
+    grid-area: card4;
+    border-color: $color-bg-accent4;
+}
+
+footer {
+    text-align: center;
+}
