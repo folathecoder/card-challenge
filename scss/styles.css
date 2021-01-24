@@ -11,8 +11,15 @@ h1 {
   font-weight: 600;
 }
 
+@media screen and (max-width: 671px) {
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
 h2 {
-  color: #4c4e61;
+  color: black;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -51,7 +58,7 @@ p {
 
 @media screen and (max-width: 671px) {
   .feature__paragraph {
-    margin: 0px 0px;
+    margin: 0px -40px;
   }
 }
 
