@@ -58,7 +58,7 @@ p {
 
 @media screen and (max-width: 671px) {
   .feature__paragraph {
-    margin: 0px -40px;
+    margin: 0px -5px;
   }
 }
 
